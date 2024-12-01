@@ -1,0 +1,29 @@
+<!-- Video streaming page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Stream Video</title>
+</head>
+<body>
+    <header>
+        <h1>Stream Video</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/upload">Upload Video</a>
+            <a href="/search">Search Videos</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="videoTitle"></h2>
+        <p id="videoDescription"></p>
+        <select id="resolutionSelector">
+            <option value="">Select Resolution</option>
+        </select>
+        <video id="videoPlayer" controls style="width: 100%; max-width: 800px; margin-top: 20px;"></video>
+    </main>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

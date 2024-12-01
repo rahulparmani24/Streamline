@@ -1,0 +1,44 @@
+distributed_video_streaming/
+│
+├── app/
+│   ├── __init__.py               # Flask app factory
+│   ├── config.py                 # Configuration for Flask, Redis, MongoDB, AWS S3
+│   ├── models.py                 # MongoDB and SQLAlchemy models
+│   ├── routes/                   # API routes
+│   │   ├── __init__.py
+│   │   ├── auth_routes.py        # User authentication endpoints
+│   │   ├── video_routes.py       # Video upload, streaming endpoints
+│   │   ├── search_routes.py      # Video search endpoint
+│   │   ├── health_routes.py      # Health check endpoint
+│   ├── utils/                    # Utility files
+│   │   ├── __init__.py
+│   │   ├── s3_utils.py           # AWS S3 integration utilities
+│   │   ├── ffmpeg_utils.py       # FFmpeg video transcoding utility
+│   │   ├── db_manager.py         # MongoDB management utility
+│
+├── static/                       # Static files (CSS, JavaScript)
+│   ├── css/
+│   │   ├── styles.css            # Styling for frontend
+│   ├── js/
+│   │   ├── app.js                # JavaScript for interactivity
+│
+├── templates/                    # HTML templates for frontend
+│   ├── index.html                # Home page
+│   ├── upload.html               # Video upload page
+│   ├── search.html               # Video search page
+│   ├── stream.html               # Video streaming page
+│
+├── uploads/                      # Local folder for uploaded files (used during testing)
+├── transcoded_videos/            # Local folder for transcoded videos (used during testing)
+│
+├── nginx/                        # NGINX configuration files
+│   ├── nginx.conf                # NGINX reverse proxy and load balancer configuration
+│
+├── docker/                       # Docker setup
+│   ├── Dockerfile                # Dockerfile to build Flask app
+│   ├── docker-compose.yml        # Docker Compose configuration for Flask, Redis, and NGINX
+│
+├── README.md                     # Project documentation
+├── requirements.txt              # Python dependencies
+├── .env                          # Environment variables for configuration
+└── wsgi.py                       # WSGI entry point for the Flask app

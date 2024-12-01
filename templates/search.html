@@ -1,0 +1,28 @@
+<!-- Video search page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Search Videos</title>
+</head>
+<body>
+    <header>
+        <h1>Search Videos</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/upload">Upload Video</a>
+        </nav>
+    </header>
+    <main>
+        <form id="searchForm">
+            <label for="query">Search:</label>
+            <input type="text" id="query" name="query" required><br>
+            <button type="submit">Search</button>
+        </form>
+        <ul id="searchResults"></ul>
+    </main>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
